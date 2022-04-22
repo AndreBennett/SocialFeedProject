@@ -1,12 +1,12 @@
 
-const DisplayEntries = (props) => {
+const DisplayPosts = (props) => {
     return ( 
               <table>
         <thead>
           <tr>
             <th>Name</th>
             <tbody>
-              {props.parentEntries.map((entry) => {
+              {props.parentPost.map((entry) => {
                 return (
                   <tr>
                     <td>{entry.name}</td>
@@ -18,7 +18,7 @@ const DisplayEntries = (props) => {
           <tr>
             <th>Post</th>
             <tbody>
-               {props.parentEntries.map((entry) => {
+               {props.parentPost.map((entry) => {
                 return (
                   <tr>
                     <td>{entry.post}</td>
@@ -33,4 +33,4 @@ const DisplayEntries = (props) => {
      );
 }
  
-export default DisplayEntries;
+export default DisplayPosts;

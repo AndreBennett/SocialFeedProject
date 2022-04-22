@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import DisplayEntries from './Components/DisplayEntries/DisplayEntries'
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts'
+import AddPostForm from './Components/AddPost/AddPostForm'
 
 function App() {
 
-const [entries, setEntries] = useState([{name: 'Andre Bennett', post: 'Hi'}])
+const [posts, setPost] = useState([{name: 'Andre', post: 'Hi'}])
+
+function addNewPost(post){
+
+  let tempPost = [post, ...posts];
+
+  setPost(tempPost);
+}
 
   return (
     <div>
-      <DisplayEntries parentEntries={entries} />
+      <DisplayPosts parentPost={posts} />
+      <AddPostForm addNewPostProperty={addNewPost} />
 
     </div>
   );
