@@ -1,10 +1,11 @@
 
 const DisplayPosts = (props) => {
     return ( 
-              <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>
+          </tr>
             <tbody>
               {props.parentPost.map((entry) => {
                 return (
@@ -14,11 +15,13 @@ const DisplayPosts = (props) => {
                 );
               })}
             </tbody>
-          </tr>
-          <tr>
-            <th>Post</th>
-            <tbody>
-               {props.parentPost.map((entry) => {
+        </thead>
+        <thead>
+            <tr>
+              <th>Post</th>
+            </tr>
+              <tbody>
+              {props.parentPost.map((entry) => {
                 return (
                   <tr>
                     <td>{entry.post}</td>
@@ -26,10 +29,8 @@ const DisplayPosts = (props) => {
                 );
               })}
             </tbody>
-          </tr> 
         </thead>
       </table>
-
      );
 }
  
